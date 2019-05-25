@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean class="gyg.UserServiceAdd_festival" id="one"/>-->
+    <!--<bean class="gyg.UserServiceAdd_festival" id="two"/>-->
+
+    <!--<bean class="gyg.Tactical" id="tactical1">-->
+    <!--<constructor-arg ref="one"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;通过xmlns:c依赖注入&ndash;&gt;-->
+    <!--<bean class="gyg.Tactical" id="tactical2" c:festival-ref="one"></bean>-->
+    <!--<bean class="gyg.Tactical" id="tactical3" c:_0-ref="one"></bean>-->
+
+    <!--<bean class="gyg.Add" id="add">-->
+    <!--&lt;!&ndash;<constructor-arg name="a" value="10"></constructor-arg>&ndash;&gt;-->
+    <!--<constructor-arg name="a" value="10"></constructor-arg>-->
+    <!--&lt;!&ndash;<constructor-arg name="b" value="100"></constructor-arg>&ndash;&gt;-->
+    <!--<constructor-arg name="b" value="100"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean class="gyg.Add" id="add2" c:str1="YuHui" c:str2="is pig">-->
+    <!--</bean>-->
+
+    <!--<bean class="gyg.Add" id="add3">-->
+    <!--<constructor-arg name="a" value="521"></constructor-arg>-->
+    <!--<constructor-arg name="str1" value="YuHui"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--Music装入普通类型，-->
+    <!--<bean class="gyg.Music" id="music">-->
+    <!--<constructor-arg name="musicer" value="薛之谦"></constructor-arg>-->
+    <!--<constructor-arg name="song" value="天分"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--<bean class="gyg.Music" id="music2">-->
+    <!--<constructor-arg type="java.util.List" name="list">-->
+    <!--<list>-->
+    <!--<value>丑八怪</value>-->
+    <!--<value>演员</value>-->
+    <!--<value>摩天大楼</value>-->
+    <!--<value>认真的雪</value>-->
+    <!--<value>怪咖</value>-->
+    <!--</list>-->
+
+    <!--</constructor-arg>-->
+    <!--<constructor-arg name="musicer" value="薛之谦"></constructor-arg>-->
+    <!--<constructor-arg name="song" value="天分"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--装入map-->
+    <bean class="gyg.Music" id="music">
+        <constructor-arg name="map">
+            <map>
+                <entry key="薛之谦" value="认真的雪"/>
+                <entry key="薛之谦" value="像风一样"/>
+                <entry key="吴亦凡" value="大碗宽面"/>
+                <entry key="陈雪凝" value="绿色"/>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>

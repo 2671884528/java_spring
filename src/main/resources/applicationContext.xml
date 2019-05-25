@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--scope="singleton" 表示单例，只能创建一个对象，在第一次注入的时候
+    如果你在这里不写默认是singleton-->
+    <!--<bean class="scope.Name" id="name" scope="singleton" init-method="init" destroy-method="destroy">-->
+        <!--<constructor-arg name="name" value="余惠"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--用来配置静态工厂方法-->
+    <bean class="factory.PersonFactory" factory-method="getPerson" id="personFactory"></bean>
+
+
+    <!--用来配置实例工厂方法-->
+    <bean class="factory.PersonFactory" id="factory"></bean>
+    <bean factory-bean="factory" factory-method="getPerson1"></bean>
+</beans>

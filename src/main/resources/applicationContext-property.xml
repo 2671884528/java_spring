@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--可以采用p名称空间注入属性-->
+
+    <bean class="gyg.Use" id="use">
+        <property name="age" value="18"></property>
+        <property name="name" value="郭永钢"></property>
+    </bean>
+    <!--装入数组和对象-->
+    <!--<bean class="gyg.Use2" id="use2">-->
+        <!--<property name="name">-->
+            <!--<array>-->
+                <!--<value>周杰伦</value>-->
+                <!--<value>薛之谦</value>-->
+                <!--<value>宁采臣</value>-->
+                <!--<value>白凤九</value>-->
+            <!--</array>-->
+        <!--</property>-->
+        <!--<property name="use" ref="use"></property>-->
+    <!--</bean>-->
+    <!--可以采用p名称空间注入属性-->
+    <bean class="gyg.Use2" id="use2" p:use-ref="use" p:name-ref="list">
+        <!--<property name="name">-->
+            <!--<array>-->
+                <!--<value>周杰伦</value>-->
+                <!--<value>薛之谦</value>-->
+                <!--<value>宁采臣</value>-->
+                <!--<value>白凤九</value>-->
+            <!--</array>-->
+        <!--</property>-->
+    </bean>
+    <!--配置数组元素-->
+    <util:list id="list">
+        <value>周杰伦</value>
+        <value>薛之谦</value>
+        <value>宁采臣</value>
+        <value>白凤九</value>
+    </util:list>
+</beans>
